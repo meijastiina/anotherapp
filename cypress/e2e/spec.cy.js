@@ -1,13 +1,13 @@
 describe('another app', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:5173/')
+    cy.visit('/')
   })
   it('can visit root', () => {
-    cy.visit('http://localhost:5173/')
+    cy.visit('/')
   })
 
   it('has correct title', () => {
-    cy.title().should('include', 'anotherapp')
+    cy.title().should('equal', 'anotherapp')
   })
   it('can add new todo items', () => {
    const newItem = 'Test task'
